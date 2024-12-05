@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  
+    color:black;
+  }
+  
+  .cart-icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .cart-button {
+    background-color: #ff6f61;
+  
+   
+    border: none;
+ 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cart-button:hover {
+    background-color: #e55a50;
+  }
+  
