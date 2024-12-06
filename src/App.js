@@ -29,6 +29,7 @@
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import UseEffectExample from "./components/UseEffectExample";
 import Cart from "./components/Cart";
+import ProductDetail from "./components/ProductDetail.js";
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<UseEffectExample />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+
       </Routes>
     </Router>
   );

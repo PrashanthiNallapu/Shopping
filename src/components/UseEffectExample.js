@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./Header";
 import { useCart } from "./cartContext";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 const UseEffectExample = () => {
   const [products, setProducts] = useState([]);
   const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchProductDetails();
@@ -30,7 +32,12 @@ const UseEffectExample = () => {
       <div className="user-cards-container">
         {products.map((product) => (
           <div className="user-card" key={product.id}>
-            <img src={product.image} alt={product.title} className="product-image" />
+            <img
+              src={product.image}
+              alt={product.title}
+              className="product-image"
+              onClick={() => navigate(`/product/${product.id}`)}
+            />
             <h5>Title: {product.title}</h5>
             <h6>Price: ${product.price}</h6>
             <h6>Rating Count: {product.rating?.count || "N/A"}</h6>
